@@ -1,7 +1,8 @@
-# jokopratama.github.io
-- <a href="https://jokopratama.github.io/hp/">Home Page</a>
-- [Index Post Grogol](#index-post-grogol.us)
+<img width="150px" src="https://raw.githubusercontent.com/jokopratama/jokopratama.github.io/master/gorol%20logo.jpeg" align="center" alt="Grogol Logo" />
+<h1 align="center">jokopratama.github.io</h1>
 ## Project Website Baru
+- <a href="https://jokopratama.github.io/hp/">Home Page</a>
+- [Index Post Grogol](#index-post-grogolus)
 ### Index Post Grogol.us
 - <a href="https://jokopratama.github.io/grogol/manga/">Manga</a>
 - <a href="https://jokopratama.github.io/grogol/anime/">Anime</a>
