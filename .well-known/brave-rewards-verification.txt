@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: jokopratama.github.io
+Token: 4871d89838646c45f96e898598e774a90df9681e1c7f3f5e0e3818b749ee3d7d
