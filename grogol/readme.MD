@@ -15,3 +15,5 @@ https://www.grogol.us/anim/list.php?id=2551
 The Good, the Bart, and the Loki (2021)
 https://www.grogol.us/anim/list.php?id=2550
 
+[Film] Josee, the Tiger and the Fish (2003)
+https://www.grogol.us/anim/list.php?id=2586
