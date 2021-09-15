@@ -17,3 +17,6 @@ https://www.grogol.us/anim/list.php?id=2550
 
 [Film] Josee, the Tiger and the Fish (2003)
 https://www.grogol.us/anim/list.php?id=2586
+
+Josee (2020) korea
+https://www.grogol.us/anim/list.php?id=2594
