@@ -20,3 +20,12 @@ https://www.grogol.us/anim/list.php?id=2586
 
 Josee (2020) korea
 https://www.grogol.us/anim/list.php?id=2594
+
+My Little Pony: A New Generation (2021)
+https://www.grogol.us/anim/list.php?id=2624
+
+PAW Patrol: The Movie (2021)
+https://www.grogol.us/anim/list.php?id=2625
+
+Dug Days (2021)
+https://www.grogol.us/anim/list.php?id=2626
