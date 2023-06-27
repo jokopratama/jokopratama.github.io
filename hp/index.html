@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Efek Mengetik dan Penghapusan Teks</title>
+  <style>
+  <style>
+  @font-face {
+    font-family: "NamaFontKhusus";
+    src: url("path/to/font/NamaFontKhusus.ttf") format("truetype");
+  }
+
+  .typing-text {
+    font-family: "NamaFontKhusus", Arial, sans-serif;
+    font-size: 24px;
+    padding: 10px;
+    width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+</style>
+
+  </style>
+</head>
+<body>
+  <div class="typing-text">
+    Helo, I'm <span id="dynamic-text"></span>
+  </div>
+
+  <script>
+    var targetTexts = [
+      "NPC.",
+      "Gunpla Builder.",
+      ""
+    ];
+    var container = document.getElementById("dynamic-text");
+    var delay = 100; // Jeda waktu dalam milidetik antara pengetikan karakter.
+    var currentText = "";
+    var currentLength = 0;
+    var isDeleting = false;
+    var currentTargetIndex = 0;
+
+    function typeText() {
+      var targetText = targetTexts[currentTargetIndex];
+      currentText = targetText.substring(0, currentLength);
+
+      if (!isDeleting) {
+        container.innerHTML = currentText + "|";
+        currentLength++;
+
+        if (currentLength > targetText.length) {
+          isDeleting = true;
+          setTimeout(typeText, 1500);
+        } else {
+          setTimeout(typeText, delay);
+        }
+      } else {
+        container.innerHTML = currentText + "|";
+        currentLength--;
+
+        if (currentLength === 0) {
+          isDeleting = false;
+          currentTargetIndex++;
+          if (currentTargetIndex === targetTexts.length) {
+            currentTargetIndex = 0;
+          }
+          setTimeout(typeText, 500);
+        } else {
+          setTimeout(typeText, delay);
+        }
+      }
+    }
+
+    // Mulai efek mengetik saat halaman dimuat.
+    window.onload = typeText;
+  </script>
+</body>
+</html>
