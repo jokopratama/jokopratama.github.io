@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Teks Mengetik dan Menghapus</title>
+  <style>
+    #typing-text {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 300px;
+      height: 50px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="typing-text"></div>
+
+  <script>
+    var text = "Contoh teks mengetik dan menghapus.";
+    var delay = 100; // Jeda waktu dalam milidetik antara pengetikan karakter.
+
+    function typeText() {
+      var container = document.getElementById("typing-text");
+      var currentText = container.innerHTML;
+      var length = currentText.length;
+
+      if (length < text.length) {
+        container.innerHTML = text.substr(0, length + 1);
+        setTimeout(typeText, delay);
+      } else {
+        setTimeout(eraseText, delay);
+      }
+    }
+
+    function eraseText() {
+      var container = document.getElementById("typing-text");
+      var currentText = container.innerHTML;
+      var length = currentText.length;
+
+      if (length > 0) {
+        container.innerHTML = text.substr(0, length - 1);
+        setTimeout(eraseText, delay);
+      } else {
+        setTimeout(typeText, delay);
+      }
+    }
+
+    // Mulai efek mengetik saat halaman dimuat.
+    window.onload = typeText;
+  </script>
+</body>
+</html>
