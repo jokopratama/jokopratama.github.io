@@ -1,5 +1,44 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting</title>
-#<meta http-equiv="refresh" content="0; URL=https://jokopratama.github.io/hp/">
-#<link rel="canonical" href="https://jokopratama.github.io/hp/">
+<html>
+<head>
+  <title>Cool Redirect Effect</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .redirect-container {
+      animation: fadeOutUp 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeOutUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+    }
+  </style>
+  <script>
+    function redirect() {
+      setTimeout(function() {
+        window.location.href = "https://jokopratama.github.io"; // Ganti dengan URL tujuan redirect
+      }, 1000); // Waktu penundaan sebelum redirect (dalam contoh ini, 1 detik)
+    }
+  </script>
+</head>
+<body onload="redirect()">
+  <div class="redirect-container">
+    <h1>Welcome...</h1>
+    <p>You will be redirected shortly.</p>
+  </div>
+</body>
+</html>
