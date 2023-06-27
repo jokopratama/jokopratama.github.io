@@ -9,11 +9,11 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      overflow: hidden;
     }
 
     .redirect-container {
       animation: fadeOutUp 1s ease-in-out forwards;
+      text-align: center;
     }
 
     @keyframes fadeOutUp {
@@ -26,19 +26,37 @@
         transform: translateY(-100%);
       }
     }
+
+    #welcome-text {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
   </style>
   <script>
     function redirect() {
       setTimeout(function() {
-        window.location.href = "https://jokopratama.github.io"; // Ganti dengan URL tujuan redirect
-      }, 1000); // Waktu penundaan sebelum redirect (dalam contoh ini, 1 detik)
+        window.location.href = "https://jokopratama.github.io/hp/"; // Ganti dengan URL tujuan redirect
+      }, 100000); // Waktu penundaan sebelum redirect (dalam contoh ini, 1 detik)
+    }
+
+    function typeText(element, text, delay) {
+      let index = 0;
+      const intervalId = setInterval(function() {
+        if (index < text.length) {
+          element.innerHTML += text.charAt(index);
+          index++;
+        } else {
+          clearInterval(intervalId);
+          redirect();
+        }
+      }, delay);
     }
   </script>
 </head>
-<body onload="redirect()">
+<body onload="typeText(document.getElementById('welcome-text'), 'Welcome...', 50)">
   <div class="redirect-container">
-    <h1>Welcome...</h1>
-    <p>You will be redirected shortly.</p>
+    <h1 id="welcome-text"></h1>
+    <p>―――――――――――――――</p>
   </div>
 </body>
 </html>
