@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Teks Mengetik dan Menghapus</title>
+  <style>
+    #typing-text {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 300px;
+      height: 50px;
+      overflow: hidden;
+    }
+
+    #additional-text {
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div id="typing-text"></div>
+  <div id="additional-text"></div>
+
+  <script>
+    var texts = [
+      "Contoh teks mengetik dan menghapus.",
+      "Tulisan lainnya setelah menghapus."
+    ];
+    var delay = 100; // Jeda waktu dalam milidetik antara pengetikan karakter.
+    var currentIndex = 0;
+
+    function typeText() {
+      var container = document.getElementById("typing-text");
+      var currentText = container.innerHTML;
+      var length = currentText.length;
+
+      if (length < texts[currentIndex].length) {
+        container.innerHTML = texts[currentIndex].substr(0, length + 1);
+        setTimeout(typeText, delay);
+      } else {
+        setTimeout(eraseText, delay);
+      }
+    }
+
+    function eraseText() {
+      var container = document.getElementById("typing-text");
+      var currentText = container.innerHTML;
+      var length = currentText.length;
+
+      if (length > 0) {
+        container.innerHTML = texts[currentIndex].substr(0, length - 1);
+        setTimeout(eraseText, delay);
+      } else {
+        currentIndex++;
+        if (currentIndex >= texts.length) {
+          currentIndex = 0;
+        }
+        setTimeout(typeText, delay);
+      }
+    }
+
+    function displayAdditionalText() {
+      var container = document.getElementById("additional-text");
+      container.innerHTML = "Teks tambahan yang ingin ditampilkan.";
+    }
+
+    // Mulai efek mengetik saat halaman dimuat.
+    window.onload = function() {
+      typeText();
+      displayAdditionalText();
+    };
+  </script>
+</body>
+Pada contoh di atas, kita menggunakan dua elemen div dengan ID "typing-text" dan "additional-text" untuk menampilkan teks. CSS digunakan untuk mengatur tampilan elemen div. Dalam script JavaScript, kita menggunakan array texts yang berisi teks yang ingin ditampilkan. Fungsi typeText dan eraseText digunakan untuk mengatur efek pengetikan dan penghapusan teks secara berulang. Fungsi displayAdditionalText digunakan untuk menampilkan teks tambahan.
+
+Setelah menyimpan file tersebut, buka file "index.html" pada browser, dan Anda akan melihat teks pertama muncul dan menghilang, kemudian diikuti dengan teks tambahan.
+
+Anda dapat mengubah teks yang ingin ditampilkan dengan mengganti nilai array texts di dalam script JavaScript sesuai keinginan Anda. Selain itu, Anda juga dapat menyesuaikan tampilan teks dengan mengubah properti CSS pada elemen div dengan ID "typing-text" dan "additional-text".
+
+Semoga ini membantu!
+</html>
